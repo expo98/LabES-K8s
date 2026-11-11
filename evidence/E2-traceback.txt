@@ -1,0 +1,60 @@
+10.244.0.97 - - [10/Nov/2026 12:49:17] "GET /patients/notes/process/ HTTP/1.1" 200 -
+10.244.0.97 - - [10/Nov/2026 12:49:17] "GET /patients/notes/process/ HTTP/1.1" 200 -
+[2026-11-10 12:49:17,078] ERROR in app: Exception on /patients/notes/process/ [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 46, in process_notes
+    conn = pool.getconn()
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/psycopg2/pool.py", line 169, in getconn
+    return self._getconn(key)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/psycopg2/pool.py", line 92, in _getconn
+    raise PoolError("connection pool exhausted")
+psycopg2.pool.PoolError: connection pool exhausted
+10.244.0.97 - - [10/Nov/2026 12:49:17] "[35m[1mGET /patients/notes/process/ HTTP/1.1[0m" 500 -
+10.244.0.97 - - [10/Nov/2026 12:49:17] "GET /patients/notes/process/ HTTP/1.1" 200 -
+10.244.0.97 - - [10/Nov/2026 12:49:17] "GET /patients/notes/process/ HTTP/1.1" 200 -
+10.244.0.97 - - [10/Nov/2026 12:49:17] "GET /patients/notes/process/ HTTP/1.1" 200 -
+[2026-11-10 12:49:17,084] ERROR in app: Exception on /patients/notes/process/ [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 46, in process_notes
+    conn = pool.getconn()
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/psycopg2/pool.py", line 169, in getconn
+    return self._getconn(key)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/psycopg2/pool.py", line 92, in _getconn
+    raise PoolError("connection pool exhausted")
+psycopg2.pool.PoolError: connection pool exhausted
+10.244.0.97 - - [10/Nov/2026 12:49:17] "[35m[1mGET /patients/notes/process/ HTTP/1.1[0m" 500 -
+10.244.0.97 - - [10/Nov/2026 12:49:17] "GET /patients/notes/process/ HTTP/1.1" 200 -
+10.244.0.97 - - [10/Nov/2026 12:49:17] "GET /patients/notes/process/ HTTP/1.1" 200 -
+[2026-11-10 12:49:17,084] ERROR in app: Exception on /patients/notes/process/ [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^

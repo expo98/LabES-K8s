@@ -1,0 +1,36 @@
+{
+  "job": "apisix",
+  "health": "up"
+}
+{
+  "job": "kubernetes-api-servers",
+  "health": "up"
+}
+{
+  "job": "kubernetes-nodes",
+  "health": "up"
+}
+{
+  "job": "kubernetes-nodes-cadvisor",
+  "health": "up"
+}
+{
+  "job": "kubernetes-service-endpoints",
+  "health": "up"
+}
+{
+  "job": "kubernetes-service-endpoints",
+  "health": "up"
+}
+{
+  "job": "kubernetes-service-endpoints",
+  "health": "up"
+}
+{
+  "job": "kubernetes-service-endpoints",
+  "health": "up"
+}
+{
+  "job": "prometheus",
+  "health": "up"
+}

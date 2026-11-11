@@ -1,0 +1,37 @@
+NAMESPACE     NAME                                             READY   STATUS      RESTARTS        AGE
+default       apisix-59b67969f4-8slc4                          1/1     Running     2 (5d ago)      12d
+default       apisix-dashboard-6dd6c75f5c-2xb4m                1/1     Running     0               111s
+default       apisix-etcd-0                                    1/1     Running     2 (5d ago)      12d
+default       apisix-etcd-1                                    1/1     Running     2 (5d ago)      12d
+default       apisix-etcd-2                                    1/1     Running     2 (5d ago)      12d
+default       apisix-etcd-pre-upgrade-zx5g5                    0/1     Completed   0               12d
+default       curlbox                                          1/1     Running     4 (8m52s ago)   54d
+default       demo-app-57447544b9-l8qfd                        1/1     Running     6 (8m52s ago)   5d1h
+default       demo-app-57447544b9-nk2vb                        1/1     Running     6 (8m52s ago)   5d1h
+default       postgres-7858dc8464-hjtnq                        1/1     Running     2 (5d ago)      12d
+kube-system   coredns-7d764666f9-tntqp                         1/1     Running     5 (5d ago)      54d
+kube-system   etcd-minikube                                    1/1     Running     5 (5d ago)      54d
+kube-system   kube-apiserver-minikube                          1/1     Running     5 (8m52s ago)   54d
+kube-system   kube-controller-manager-minikube                 1/1     Running     5 (5d ago)      54d
+kube-system   kube-proxy-cskr4                                 1/1     Running     5 (5d ago)      54d
+kube-system   kube-scheduler-minikube                          1/1     Running     5 (5d ago)      54d
+kube-system   metrics-server-9d74bb658-47d7t                   1/1     Running     3 (5d ago)      12d
+kube-system   storage-provisioner                              1/1     Running     9 (8m9s ago)    54d
+monitoring    prometheus-adapter-f8b5d5cb8-c2j42               1/1     Running     4 (8m9s ago)    12d
+monitoring    prometheus-kube-state-metrics-798fb7d7b8-pt87s   1/1     Running     4 (8m10s ago)   12d
+monitoring    prometheus-prometheus-node-exporter-k5mrp        1/1     Running     2 (5d ago)      12d
+monitoring    prometheus-server-6675994694-sq6gc               2/2     Running     4 (5d ago)      12d
+NAME                        TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
+apisix-admin                ClusterIP   10.106.129.121   <none>        9180/TCP            12d
+apisix-control              ClusterIP   10.101.104.249   <none>        9090/TCP            12d
+apisix-dashboard            ClusterIP   10.104.106.188   <none>        80/TCP              115s
+apisix-etcd                 ClusterIP   10.102.107.89    <none>        2379/TCP,2380/TCP   12d
+apisix-etcd-headless        ClusterIP   None             <none>        2379/TCP,2380/TCP   12d
+apisix-gateway              NodePort    10.111.34.209    <none>        80:30976/TCP        12d
+apisix-metrics              ClusterIP   10.101.225.31    <none>        9091/TCP            12d
+apisix-prometheus-metrics   ClusterIP   10.107.179.49    <none>        9091/TCP            12d
+demo-app                    ClusterIP   10.99.83.111     <none>        80/TCP              12d
+kubernetes                  ClusterIP   10.96.0.1        <none>        443/TCP             54d
+postgres                    ClusterIP   10.106.235.214   <none>        5432/TCP            12d
+NAME           REFERENCE             TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+demo-app-hpa   Deployment/demo-app   <unknown>/15 (avg)   2         4         2          12d

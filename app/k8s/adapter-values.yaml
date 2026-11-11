@@ -1,0 +1,13 @@
+prometheus:
+  url: http://prometheus-server.monitoring.svc
+  port: 80
+
+rules:
+  default: false         
+  external:
+    - seriesQuery: 'apisix_http_status'
+      resources:
+        namespaced: false
+      name:
+        as: "apisix_http_requests_per_second"
+      metricsQuery: 'sum(rate(<<.Series>>{<<.LabelMatchers>>}[1m]))'

@@ -1,0 +1,21 @@
+{
+  "name": "django-route",
+  "uri": "/django/*",
+  "nodes": {
+    "demo-app.default.svc.cluster.local:80": 1
+  }
+}
+{
+  "name": "notes-io",
+  "uri": "/patients/notes/",
+  "nodes": {
+    "demo-app.default.svc.cluster.local:80": 1
+  }
+}
+{
+  "name": "notes-process",
+  "uri": "/patients/notes/process/",
+  "nodes": {
+    "demo-app.default.svc.cluster.local:80": 1
+  }
+}

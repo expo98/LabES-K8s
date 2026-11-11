@@ -1,0 +1,29 @@
+{
+  "id": "django-route",
+  "name": "django-route",
+  "uri": "/django/*",
+  "plugins": [
+    "proxy-rewrite"
+  ],
+  "nodes": {
+    "demo-app.default.svc.cluster.local:80": 1
+  }
+}
+{
+  "id": "notes-io",
+  "name": "notes-io",
+  "uri": "/patients/notes/",
+  "plugins": [],
+  "nodes": {
+    "demo-app.default.svc.cluster.local:80": 1
+  }
+}
+{
+  "id": "notes-process",
+  "name": "notes-process",
+  "uri": "/patients/notes/process/",
+  "plugins": [],
+  "nodes": {
+    "demo-app.default.svc.cluster.local:80": 1
+  }
+}

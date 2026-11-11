@@ -1,0 +1,6 @@
+hey-io baseline (no HPA, 2 replicas, POST /patients/notes/, -z 300s -c 10 -q 10)
+Requests/sec: 99.9826
+Total: 300.0521 secs, Slowest 0.1577, Fastest 0.0040, Average 0.0417
+Latency: p10 0.0268, p25 0.0343, p50 0.0430, p75 0.0511, p90 0.0576, p95 0.0622, p99 0.0713
+Status: [200] 30000 responses
+CPU during run (kubectl top): ~260m per Pod

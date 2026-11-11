@@ -1,0 +1,15 @@
+{
+  "uri": "/django/*",
+  "name": "django-route",
+  "plugins": {
+    "proxy-rewrite": {
+      "regex_uri": ["^/django/(.*)", "/$1"]
+    }
+  },
+  "upstream": {
+    "type": "roundrobin",
+    "nodes": {
+      "demo-app.default.svc.cluster.local:80": 1
+    }
+  }
+}

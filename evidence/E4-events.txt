@@ -1,0 +1,25 @@
+9m43s       Normal    Pulled                         pod/apisix-dashboard-6dd6c75f5c-2xb4m   Container image "apache/apisix-dashboard:3.0.0-alpine" already present on machine and can be accessed by the pod
+8m19s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/demo-app-hpa    invalid metrics (1 invalid out of 1), first error is: failed to get apisix_http_requests_per_second external metric value: failed to get apisix_http_requests_per_second external metric: unable to get external metric default/apisix_http_requests_per_second/&LabelSelector{MatchLabels:map[string]string{route: notes-io,},MatchExpressions:[]LabelSelectorRequirement{},}: unable to fetch metrics from external metrics API: the server could not find the metric apisix_http_requests_per_second for namespaces
+8m4s        Warning   FailedGetExternalMetric        horizontalpodautoscaler/demo-app-hpa    unable to get external metric default/apisix_http_requests_per_second/&LabelSelector{MatchLabels:map[string]string{route: notes-io,},MatchExpressions:[]LabelSelectorRequirement{},}: unable to fetch metrics from external metrics API: the server could not find the metric apisix_http_requests_per_second for namespaces
+4m22s       Normal    Pulling                        pod/hey-e4                              Pulling image "williamyeh/hey"
+4m21s       Normal    Started                        pod/hey-e4                              Container started
+4m21s       Normal    Pulled                         pod/hey-e4                              Successfully pulled image "williamyeh/hey" in 1.171s (1.171s including waiting). Image size: 15652423 bytes.
+4m21s       Normal    Created                        pod/hey-e4                              Container created
+3m34s       Normal    SuccessfulCreate               replicaset/demo-app-5bbc498485          Created pod: demo-app-5bbc498485-qb8gh
+3m34s       Normal    ScalingReplicaSet              deployment/demo-app                     Scaled up replica set demo-app-5bbc498485 from 2 to 4
+3m34s       Normal    SuccessfulRescale              horizontalpodautoscaler/demo-app-hpa    New size: 4; reason: external metric apisix_http_requests_per_second(&LabelSelector{MatchLabels:map[string]string{route: notes-io,},MatchExpressions:[]LabelSelectorRequirement{},}) above target
+3m34s       Normal    SuccessfulCreate               replicaset/demo-app-5bbc498485          Created pod: demo-app-5bbc498485-qlhwt
+3m33s       Normal    Pulled                         pod/demo-app-5bbc498485-qb8gh           Container image "demo-app:1.1" already present on machine and can be accessed by the pod
+3m33s       Normal    Started                        pod/demo-app-5bbc498485-qlhwt           Container started
+3m33s       Normal    Created                        pod/demo-app-5bbc498485-qb8gh           Container created
+3m33s       Normal    Started                        pod/demo-app-5bbc498485-qb8gh           Container started
+3m33s       Normal    Pulled                         pod/demo-app-5bbc498485-qlhwt           Container image "demo-app:1.1" already present on machine and can be accessed by the pod
+3m33s       Normal    Created                        pod/demo-app-5bbc498485-qlhwt           Container created
+49s         Normal    SuccessfulRescale              horizontalpodautoscaler/demo-app-hpa    New size: 3; reason: All metrics below target
+49s         Normal    Killing                        pod/demo-app-5bbc498485-qlhwt           Stopping container demo-app
+49s         Normal    SuccessfulDelete               replicaset/demo-app-5bbc498485          Deleted pod: demo-app-5bbc498485-qlhwt
+49s         Normal    ScalingReplicaSet              deployment/demo-app                     Scaled down replica set demo-app-5bbc498485 from 4 to 3
+34s         Normal    SuccessfulDelete               replicaset/demo-app-5bbc498485          Deleted pod: demo-app-5bbc498485-qb8gh
+34s         Normal    ScalingReplicaSet              deployment/demo-app                     Scaled down replica set demo-app-5bbc498485 from 3 to 2
+34s         Normal    Killing                        pod/demo-app-5bbc498485-qb8gh           Stopping container demo-app
+34s         Normal    SuccessfulRescale              horizontalpodautoscaler/demo-app-hpa    New size: 2; reason: All metrics below target
